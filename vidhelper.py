@@ -2,10 +2,11 @@ import os
 
 def getVid(name):
     return """
-<video width="320" height="240" controls>
-  <source src="%s" type="video/mp4">
+<p>""" + name + """</p>
+<video width="720" height="720" controls>
+  <source src="emmet/""" + name + """" type="video/mp4">
 Your browser does not support the video tag.
-</video>"""%name
+</video>"""
 
 print("<body>")
 

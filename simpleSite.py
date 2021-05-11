@@ -8,5 +8,7 @@ def index(request):
     context = {
             'foo': 'foo',
             }
-    return render(request, 'simpleweb/index.html', context)
+    template = loader.get_template('simpleweb/index.html')
+    return HttpResponse(template.render(context, request))
 # Create your views here.
+
